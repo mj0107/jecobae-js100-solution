@@ -1,5 +1,8 @@
 function isConsecutiveNumber(str) {
-  let arr = str.split(" ").map(Number);
+  let arr = str
+    .split(" ")
+    .map(Number)
+    .sort((a, b) => a - b);
 
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] !== arr[0] + i) return "NO";
@@ -8,7 +11,7 @@ function isConsecutiveNumber(str) {
   return "YES";
 }
 
-const str = "1 2 3 4 5"; // YES
+const str = "1 3 2 5 4"; // YES
 /*
   1 4 2 6 3 // NO
   1 2 3 4   // 공백을 입력받았을 경우 NO
