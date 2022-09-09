@@ -37,6 +37,7 @@ function printMultiply(matrix1, matrix2) {
 
 function solution(matrix1, matrix2) {
   if (isMultiplyPossible(matrix1, matrix2)) printMultiply(matrix1, matrix2);
+  else console.log(-1);
 }
 
 const a = [
