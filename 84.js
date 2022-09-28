@@ -1,3 +1,11 @@
+/**
+ * 어떤 수 N에서 K개의 수를 선택하여 만들 수 있는 수 중에서
+ *
+ * 가장 큰 수를 반환하는 함수
+ * @param {Number} N
+ * @param {Number} K
+ * @returns {Number} 가장 큰 수
+ */
 function pickNumber(N, K) {
   return parseInt(
     N.toString() // 문자열로 변환
