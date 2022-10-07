@@ -10,18 +10,18 @@
  */
 function getRuntimeWithFIFO(PAGE_LIST, MEMORY_SIZE, RUNTIME_INFO) {
   const { HIT, MISS } = RUNTIME_INFO;
-  let frame = [];
+  let memory = [];
   let runTime = 0;
 
   for (const PAGE of PAGE_LIST) {
     // PAGE가 메모리에 이미 있다면, HIT
-    if (frame.includes(PAGE)) runTime += HIT;
+    if (memory.includes(PAGE)) runTime += HIT;
     // PAGE가 메모리에 없다면,
     else {
       // 메모리가 꽉 찼을 경우는 제일 오래된 것 교체
-      if (frame.length === MEMORY_SIZE) frame.shift();
+      if (memory.length === MEMORY_SIZE) memory.shift();
 
-      frame.push(PAGE);
+      memory.push(PAGE);
       runTime += MISS;
     }
   }
