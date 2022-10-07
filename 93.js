@@ -23,7 +23,7 @@ function getRuntimeWithFIFO(PAGE_LIST, MEMORY_SIZE, RUNTIME_INFO) {
       if (memory.length === MEMORY_SIZE) {
         memory[oldestPageIndex] = PAGE;
         oldestPageIndex += 1;
-        oldestPageIndex % MEMORY_SIZE;
+        oldestPageIndex %= MEMORY_SIZE;
       } else memory.push(PAGE);
       runTime += MISS;
     }
