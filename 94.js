@@ -1,3 +1,13 @@
+/**
+ * 적재할 페이지, 메모리 크기,
+ * hit와 miss 일 때의 실행시간이 담긴 객체를 받아,
+ * LRU 페이지 교체 알고리즘을 실행할 때 총 실행시간을 구하는 함수
+ *
+ * @param {string} PAGE_LIST 적재할 페이지를 나열한 문자열
+ * @param {number} MEMORY_SIZE 메모리의 크기
+ * @param {Object} RUNTIME_INFO hit와 miss 일 때의 실행시간이 담긴 객체
+ * @returns {number} 총 실행시간
+ */
 function getRuntimeWithLRU(PAGE_LIST, MEMORY_SIZE, RUNTIME_INFO) {
   const { HIT, MISS } = RUNTIME_INFO;
   let memory = [];
