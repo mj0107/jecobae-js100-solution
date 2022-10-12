@@ -11,7 +11,7 @@ function getRotateStamp(STAMP, ROTATE_COUNT) {
   const STAMP_ROW = STAMP.length;
   const STAMP_COL = STAMP[0].length;
 
-  for (let cnt = 1; cnt <= ROTATE_COUNT; cnt += 1) {
+  for (let cnt = 1; cnt <= ROTATE_COUNT % 4; cnt += 1) {
     for (let col = 0; col < STAMP_COL; col += 1) {
       let rowArray = [];
       for (let row = 0; row < STAMP_ROW; row += 1) {
