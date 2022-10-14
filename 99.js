@@ -11,7 +11,10 @@ function solution() {
     isPossiblePassed = true;
     for (let i = POWER - 1; i < BRIDGE_LENGTH; i += POWER) {
       stoneDurabilityArr[i] -= 1;
-      if (stoneDurabilityArr[i] < 0) isPossiblePassed = false;
+      if (stoneDurabilityArr[i] < 0) {
+        isPossiblePassed = false;
+        break;
+      }
     }
 
     if (isPossiblePassed) result.push('pass');
